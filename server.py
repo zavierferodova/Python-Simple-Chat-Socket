@@ -2,7 +2,7 @@ import socket
 from threading import Thread
 
 HOST = 'localhost'
-PORT = 50001
+PORT = 5001
 
 client_connections = set()
 max_conn = 100

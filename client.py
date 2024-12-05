@@ -1,8 +1,8 @@
 import socket
 from threading import Thread
 
-HOST = 'localhost'
-PORT = 50001
+# HOST = 'localhost'
+# PORT = 5000
 
 def listen_for_messages(s: socket):
     empty_response = 0
@@ -20,6 +20,10 @@ def listen_for_messages(s: socket):
             exit(0)
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    HOST = input('Input Server HOST : ')
+    PORT = input('Input Server PORT : ')
+    HOST = HOST
+    PORT = int(PORT)
     print(f'Connecting with {HOST}:{PORT} ...')
     s.connect((HOST, PORT))
     print('Connected ! \n')
